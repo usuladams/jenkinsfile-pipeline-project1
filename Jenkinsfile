@@ -7,7 +7,7 @@ pipeline {
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
-        stage('brun') {
+        stage('run') {
             steps {
                 echo 'Hello World'
                 sh 'ls'
@@ -18,5 +18,13 @@ pipeline {
                 '''
             }
         }
+        stage('run-python') {
+            steps {
+                echo 'Hello Python3 World'
+                sh 'python3 --version'
+                sh 'python3 pipeline.py'
+            }
+        }
+
     }
 }
