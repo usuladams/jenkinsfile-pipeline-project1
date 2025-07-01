@@ -26,5 +26,18 @@ pipeline {
             }
         }
 
+        stage('build-java') {
+            steps {
+                echo 'Compiling the Java source code'
+                sh 'javac Hello.java'
+            }
+        }
+        stage('run-java') {
+            steps {
+                echo 'Running the compiled Java code.'
+                sh 'java Hello'
+            }
+        }
+
     }
 }
