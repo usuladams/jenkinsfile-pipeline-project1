@@ -14,13 +14,13 @@ pipeline {
                 sh 'pwd'
                 sh '''
                 whoami
-                touch demo.txt
+                touch demo2.txt
                 '''
             }
         }
         stage('run-python') {
             steps {
-                echo 'Hello Python3 World'
+                echo 'Hello Python3 World-3'
                 sh 'python3 --version'
                 sh 'python3 pipeline.py'
             }
