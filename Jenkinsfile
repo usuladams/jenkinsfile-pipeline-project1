@@ -7,5 +7,16 @@ pipeline {
                 sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
             }
         }
+        stage('brun') {
+            steps {
+                echo 'Hello World'
+                sh 'ls'
+                sh 'pwd'
+                sh '''
+                whoami
+                touch demo.txt
+                '''
+            }
+        }
     }
 }
